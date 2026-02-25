@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="./assets/fonts/KranaFat.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="./assets/img/logo.png" />
+    <title>CZAI | CZ AI</title>
+    <style>
+      body {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      [data-fls-loaded] body {
+        animation: show-body 0.45s ease 0.2s forwards;
+      }
+
+      @keyframes show-body {
+        0% {
+          opacity: 0;
+          visibility: hidden;
+        }
+        100% {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .myhero {
+        opacity: 5%;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 40;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-blend-mode: overlay;
+        background-image: url("/images/1grain.BVZAnKJ_.gif");
+      }
+    </style>
+    <script
+      type="module"
+      crossorigin=""
+      src="./js/index.min.js?v=1752499756853"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin=""
+      href="./css/index.min.css?v=1752499756853"
+    />
+  </head>
+  <body>
+    <div class="myhero"></div>
+    <div class="wrapper">
+      <div class="overlay"></div>
+      <div class="menu-open-bg"></div>
+      <header data-fls-header="" class="header">
+        <div class="header__container">
+          <div class="header__body">
+            <div class="header__menu menu">
+              <button
+                type="button"
+                data-fls-menu=""
+                class="menu__icon icon-menu"
+              >
+                <span></span>
+              </button>
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" data-fls-scrollto=".about" class="menu__link"
+                      >ABOUT</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      href="#"
+                      data-fls-scrollto=".how"
+                      data-fls-scrollto-top="-120"
+                      class="menu__link"
+                      >HOW TO BUY</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      href="#"
+                      data-fls-scrollto=".tokenomics"
+                      data-fls-scrollto-top="260"
+                      class="menu__link"
+                      >TOKENOMICS</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <a href="../" class="header__logo">
+              <img alt="BINA" src="./assets/img/logo.png" />
+            </a>
+            <div
+              class="header__actions"
+              data-fls-dynamic=".menu__body, 1024.98"
+            >
+              <div class="header__social">
+                <!--
+<a href="#" target="_blank" class="header__social-item">
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="28"
+height="29"
+viewBox="0 0 28 29"
+fill="none">
+<path
+fill-rule="evenodd"
+clip-rule="evenodd"
+d="M11.2278 3.66392C9.81798 4.41944 8.66462 5.05884 8.66492 5.08487C8.66557 5.15195 12.0483 6.91466 12.1684 6.91033C12.2229 6.90851 12.6192 6.72079 13.0488 6.49345L13.83 6.08005L14.6832 6.53128L15.5364 6.98259L16.9336 6.33667C19.0388 5.36333 19.2574 5.25667 19.2232 5.22089C19.1777 5.17331 18.4227 4.75601 16.374 3.64627C15.3839 3.10993 14.4229 2.58412 14.2384 2.47765C14.0538 2.37108 13.8777 2.28548 13.8469 2.28713C13.8161 2.28879 12.6375 2.9084 11.2278 3.66392ZM5.04456 6.95812L3.57706 7.7381V11.161C3.57706 13.0437 3.5963 14.5839 3.61999 14.5839C3.64368 14.5839 4.36559 14.2619 5.22443 13.8683L6.786 13.1526V9.54471L7.54915 9.97244C8.13715 10.3017 8.72562 10.6303 9.31428 10.9583L10.3163 11.5165L10.7622 11.309C11.0418 11.1787 11.3209 11.0472 11.5994 10.9143C11.8146 10.8111 12.3429 10.5663 12.7735 10.3701C13.204 10.1739 13.6024 9.9764 13.6589 9.93147C13.734 9.8717 12.8187 9.35133 10.2737 8.00666C8.35531 6.99306 6.72416 6.16692 6.64892 6.17092C6.57367 6.17492 5.85176 6.5291 5.04456 6.95812ZM19.4875 7.17713C18.488 7.64132 17.6695 8.03971 17.6686 8.06241C17.6678 8.08512 18.2124 8.41838 18.8792 8.80289C19.5459 9.18753 20.0914 9.52273 20.0914 9.548C20.0914 9.57326 19.5015 9.86732 18.7805 10.2017C18.0593 10.5361 16.2368 11.383 14.7301 12.0837L9.68179 14.4314C8.4119 15.0221 7.26724 15.5544 7.13808 15.6146C4.54422 16.8227 3.83131 17.1579 3.73342 17.2154C3.63496 17.2734 3.61269 17.6099 3.59516 19.2992L3.57422 21.314L4.88659 22.002L6.19889 22.6899L8.01859 21.845C9.0195 21.3803 9.83836 20.9758 9.83836 20.9459C9.83836 20.9161 9.65338 20.7923 9.42747 20.6703C9.20144 20.5483 8.73474 20.2785 8.39034 20.0703C8.046 19.8622 7.70267 19.6713 7.62725 19.6459C7.55189 19.6206 7.49136 19.5765 7.49255 19.5476C7.4938 19.5189 8.29514 19.1273 9.27317 18.6773C11.1728 17.8035 12.6266 17.13 15.7476 15.6779C17.1431 15.0286 18.539 14.3801 19.9349 13.7315C21.1617 13.1617 22.5881 12.4964 23.1047 12.2529L24.0439 11.8101L24.0647 9.77236L24.0857 7.73469L22.7546 7.03183C22.0225 6.64525 21.3968 6.32994 21.364 6.33111C21.3312 6.33218 20.4869 6.71287 19.4875 7.17713ZM23.6874 14.5285C23.4912 14.627 23.1039 14.8116 22.8265 14.9385C22.5491 15.0655 22.0228 15.3098 21.6568 15.4816L20.9916 15.7938L20.9764 17.5827C20.9681 18.5666 20.9328 19.3672 20.8981 19.3621C20.8194 19.35 19.5725 18.6921 18.3192 18.0011C17.4146 17.5024 17.3577 17.4826 17.1452 17.5909C17.0223 17.6536 16.2877 17.9925 15.5129 18.3442C14.738 18.6959 14.0788 19.0066 14.0477 19.0347C14.0168 19.0628 15.5763 19.9323 17.5133 20.9673L21.0351 22.849L22.5395 22.0482C23.3669 21.6079 24.0705 21.2062 24.1029 21.1557C24.1758 21.0421 24.1695 14.3336 24.0965 14.3426C24.0676 14.3462 23.8835 14.4299 23.6874 14.5285ZM15.3563 22.4026C15.0953 22.518 14.8344 22.6337 14.5736 22.7494C13.7861 23.1 13.9404 23.1116 13.0033 22.6317C12.3792 22.3121 12.1102 22.2134 11.9935 22.2613C11.9059 22.2972 11.152 22.6462 10.3182 23.0368C9.48442 23.4274 8.77328 23.7469 8.73796 23.7469C8.38807 23.7469 8.96976 24.1043 11.2139 25.2691L13.8459 26.6349L14.9533 26.0725C15.5623 25.7631 16.7908 25.1435 17.6833 24.6958C18.5757 24.2479 19.2949 23.8698 19.2814 23.8556C19.2679 23.8413 18.5201 23.4462 17.6196 22.9776L15.9824 22.1257L15.3563 22.4026Z"
+fill="white" />
+</svg>
+</a>
+<a href="#" target="_blank" class="header__social-item">
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="22"
+height="25"
+viewBox="0 0 22 25"
+fill="none">
+<path
+fill-rule="evenodd"
+clip-rule="evenodd"
+d="M13.069 9.03096C13.8052 8.66553 14.7416 8.12744 15.6794 7.39019C15.8771 7.79911 15.8989 8.15586 15.7969 8.44387C15.7247 8.64686 15.5886 8.82348 15.4099 8.96395C15.2163 9.11567 14.9743 9.22641 14.7069 9.28612C14.1995 9.39991 13.6071 9.33363 13.069 9.03096ZM13.1967 12.7758L14.171 13.3363C12.1815 14.4467 11.6405 16.5087 10.9979 18.5169C10.3556 16.5087 9.81454 14.4466 7.82509 13.3363L8.79944 12.7758C8.99281 12.703 9.11719 12.5147 9.10738 12.309C9.01799 10.4281 9.52802 9.59627 10.2161 9.07421C10.4627 8.88719 10.7321 8.79332 10.9979 8.79332C11.2637 8.79332 11.5331 8.88719 11.7798 9.07421C12.4676 9.59651 12.9776 10.4281 12.8885 12.309C12.8787 12.5147 13.0035 12.703 13.1967 12.7758ZM10.9982 0.494873C12.1245 0.525048 13.2537 0.74271 14.2336 1.16628C14.9123 1.46004 15.5453 1.84788 16.1188 2.31183C16.3777 2.52128 16.591 2.72363 16.8259 2.95661C17.4593 2.97835 18.3851 2.27766 18.8149 1.62201C18.0751 4.0367 14.6999 6.88805 12.3633 7.97925C12.3624 7.97883 12.3618 7.97835 12.3611 7.97793C11.9418 7.65905 11.4701 7.49955 10.9983 7.49955C10.5267 7.49955 10.055 7.65905 9.63565 7.97793C9.63499 7.97835 9.63434 7.97901 9.63344 7.97925C7.29633 6.88805 3.92139 4.03648 3.18164 1.62201C3.61145 2.27766 4.53702 2.97857 5.17047 2.95661C5.40532 2.72385 5.61855 2.52128 5.87746 2.31183C6.45076 1.84788 7.08401 1.46004 7.76269 1.16628C8.74285 0.74271 9.87185 0.525048 10.9982 0.494873ZM8.92735 9.03096C8.19135 8.66553 7.25469 8.12744 6.31685 7.39019C6.11921 7.79911 6.09738 8.15586 6.1992 8.44387C6.27139 8.64686 6.40753 8.82348 6.58623 8.96395C6.78007 9.11567 7.02202 9.22641 7.28945 9.28612C7.79679 9.39991 8.38944 9.33363 8.92735 9.03096Z"
+fill="white" />
+<path
+fill-rule="evenodd"
+clip-rule="evenodd"
+d="M16.7078 6.48711C17.2241 5.96835 17.6791 5.39413 18.0447 4.88159L18.2306 5.22972C18.8286 6.4212 19.1394 7.60804 19.1394 8.94351L19.1381 11.0629L19.1492 12.1614C19.1925 14.8585 19.7787 17.5872 21.1062 20.0844L18.3286 17.8541L16.3634 21.0298L14.2988 19.0944L10.9994 24.4261L7.69994 19.0946L5.63538 21.0301L3.67017 17.8544L0.892578 20.0847C2.2201 17.5874 2.8061 14.8585 2.84955 12.1616L2.86069 11.0631L2.85935 8.94375C2.85935 7.60804 3.16995 6.42142 3.7682 5.22994L3.95381 4.88181C4.31967 5.39413 4.77443 5.96835 5.29069 6.48735L5.12937 6.82083C4.81609 7.46846 4.71249 8.19267 4.95647 8.88159C5.11377 9.32515 5.40076 9.70566 5.77085 9.99612C6.13025 10.2781 6.5556 10.4683 7.0008 10.5681C7.2909 10.6331 7.58633 10.66 7.88003 10.6509C7.81158 11.0376 7.78149 11.4385 7.77975 11.8472L5.15967 13.3542L7.18148 14.4827C7.34301 14.573 7.49701 14.6761 7.64137 14.7918C9.30823 16.2821 10.3105 20.691 10.9991 22.8446C11.6879 20.691 12.6901 16.2821 14.357 14.7918C14.5013 14.6764 14.6553 14.573 14.8169 14.4827L16.8387 13.3542L14.2186 11.8472C14.2166 11.4385 14.1867 11.0376 14.1183 10.6509C14.412 10.66 14.7074 10.6331 14.9975 10.5681C15.4427 10.4683 15.8681 10.2781 16.2275 9.99612C16.5976 9.70566 16.8846 9.32515 17.0418 8.88159C17.2858 8.19291 17.1822 7.4687 16.8689 6.82083L16.7078 6.48711Z"
+fill="white" />
+</svg>
+</a>
+-->
+                <a
+                  href="https://t.me/CZ_AI_binance"
+                  target="_blank"
+                  class="header__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="17"
+                    viewbox="0 0 20 17"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.6928 0.585568C17.931 0.488833 18.1914 0.45547 18.4471 0.488951C18.7027 0.522431 18.9442 0.621532 19.1464 0.775938C19.3486 0.930344 19.5041 1.13441 19.5968 1.3669C19.6894 1.59938 19.7158 1.85179 19.6731 2.09785L17.4511 14.8927C17.2356 16.1269 15.8319 16.8347 14.6622 16.2199C13.6838 15.7056 12.2308 14.9132 10.9241 14.0864C10.2708 13.6725 8.26963 12.3471 8.51892 11.4041C8.73314 10.5977 12.1115 7.56755 14.0422 5.76602C14.8 5.05824 14.4566 4.64994 13.5623 5.30099C11.3414 6.91744 7.77614 9.37559 6.59772 10.0676C5.55816 10.6777 5.01685 10.7818 4.37028 10.6777C3.19068 10.4879 2.09706 10.194 1.20483 9.83597C-0.000833296 9.35234 0.0627449 7.74891 1.21161 7.28202L17.6928 0.585568Z"
+                      fill="#FAFDFF"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://x.com/CZ_AI_binance"
+                  target="_blank"
+                  class="header__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="23"
+                    viewbox="0 0 22 23"
+                    fill="none"
+                  >
+                    <path
+                      d="M17.3259 1.51758H20.6992L13.3293 9.94175L22 21.4028H15.2112L9.8945 14.4508L3.80967 21.4028H0.4345L8.31783 12.392L0 1.51849H6.96117L11.7673 7.87283L17.3259 1.51758ZM16.1425 19.3843H18.0116L5.9455 3.43066H3.93983L16.1425 19.3843Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <a
+                href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x00000000000000000000000000000000000000"
+                target="_blank"
+                class="header__button"
+                >buy now</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page__hero hero">
+          <div class="hero__bg">
+            <div class="hero__bg-bg">
+              <img src="./assets/img/hero/hero-bg.svg" alt="BG" />
+            </div>
+            <div class="hero__bg-coins">
+              <img
+                data-fls-mouse=""
+                data-fls-mouse-cx="700"
+                data-fls-mouse-cy="700"
+                data-fls-mouse-dxr=""
+                data-fls-mouse-dyr=""
+                alt="Coins"
+                src="./assets/img/hero/coins-bg.webp"
+              />
+            </div>
+          </div>
+          <div class="hero__container">
+            <h1 class="hero__title">
+              <img alt="BINA" src="./assets/img/hero/title-logo.png" />
+            </h1>
+            <div class="hero__images">
+              <div class="hero__images-light">
+                <img alt="light" src="./assets/img/hero/light.webp" />
+              </div>
+              <div class="hero__images-elements">
+                <img alt="elements" src="./assets/img/hero/elements.webp" />
+              </div>
+              <div class="hero__images-coins">
+                <img
+                  data-fls-mouse=""
+                  data-fls-mouse-cx="900"
+                  data-fls-mouse-cy="900"
+                  alt="coins"
+                  src="./assets/img/hero/coins.png"
+                />
+              </div>
+              <div class="hero__images-fragments">
+                <img
+                  data-fls-mouse=""
+                  data-fls-mouse-cx="1100"
+                  data-fls-mouse-cy="1100"
+                  data-fls-mouse-dxr=""
+                  data-fls-mouse-dyr=""
+                  alt="fragments"
+                  src="./assets/img/hero/fragments.png"
+                />
+              </div>
+              <div class="hero__images-wallet">
+                <img alt="wallet" src="./assets/img/hero/wallet.png" />
+              </div>
+              <div class="hero__images-fox">
+                <img alt="BINA" src="./assets/img/hero/fox.png" />
+                <img alt="BINA" src="./assets/img/hero/fox2.png" />
+                <img alt="BINA" src="./assets/img/hero/fox3.png" />
+              </div>
+            </div>
+            <div class="hero__actions">
+              <a
+                href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x00000000000000000000000000000000000000"
+                target="_blank"
+                class="hero__button"
+                >buy now</a
+              >
+              <div class="hero__social">
+                <a
+                  href="https://t.me/CZ_AI_binance"
+                  target="_blank"
+                  class="hero__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="36"
+                    viewbox="0 0 42 36"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M37.4341 1.17566C37.943 0.968997 38.4994 0.897721 39.0456 0.969248C39.5918 1.04077 40.1077 1.25249 40.5396 1.58236C40.9716 1.91223 41.3038 2.34819 41.5017 2.84486C41.6996 3.34154 41.756 3.88078 41.6649 4.40644L36.9179 31.7409C36.4574 34.3776 33.4586 35.8897 30.9598 34.5763C28.8696 33.4775 25.7653 31.7847 22.9737 30.0183C21.578 29.1341 17.3028 26.3027 17.8354 24.2879C18.2931 22.5652 25.5105 16.0917 29.6352 12.243C31.2541 10.7309 30.5205 9.85864 28.6099 11.2495C23.8654 14.7028 16.2486 19.9543 13.731 21.4326C11.5102 22.7361 10.3537 22.9586 8.97243 22.7361C6.45236 22.3307 4.11601 21.7029 2.20988 20.9379C-0.36586 19.9047 -0.230034 16.4792 2.22435 15.4817L37.4341 1.17566Z"
+                      fill="#FAFDFF"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://x.com/CZ_AI_binance"
+                  target="_blank"
+                  class="hero__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewbox="0 0 48 48"
+                    fill="none"
+                  >
+                    <path
+                      d="M37.5125 2.75769H44.7192L28.9742 20.7548L47.498 45.2398H32.9946L21.6363 30.3878L8.63688 45.2398H1.4263L18.268 25.9894L0.498047 2.75965L15.3696 2.75965L25.6372 16.3348L37.5125 2.75769ZM34.9843 40.9276H38.9773L13.1998 6.84473H8.91496L34.9843 40.9276Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__about about">
+          <div class="about__bg">
+            <img alt="BG" src="./assets/img/about/about-bg.webp" />
+          </div>
+          <div class="about__top">
+            <img alt="Top" src="./assets/img/about/HB-divider.webp" />
+          </div>
+          <div class="about__container">
+            <div class="about__image">
+              <img alt="BINA" src="./assets/img/about/about-images.png" />
+              <img alt="balloon" src="./assets/img/about/balloon1.webp" />
+              <img alt="balloon" src="./assets/img/about/balloon2.webp" />
+              <img alt="balloon" src="./assets/img/about/balloon3.png" />
+            </div>
+            <div class="about__content">
+              <h2 class="about__title">
+                <img
+                  alt="ABOUT BINA"
+                  src="./assets/img/about/about-title.png"
+                />
+              </h2>
+              <div class="about__text">
+                <p>CZ AI</p>
+                <p>
+                  <span>How did the story begin?</span>
+                </p>
+                <p>
+                  Inspired by the cultural impact of Changpeng Zhao, this project is an AI-driven blockchain meme experiment that blends internet humor with autonomous agents. It uses AI personas to generate memes, narratives, and on-chain interactions, turning community sentiment into evolving digital culture.
+                </p>
+                <p>
+                  The project does not claim affiliation, but reimagines the CZ archetype as a symbolic figure representing decentralization, resilience, and builder mentality in crypto.
+                </p>
+              </div>
+              <div class="about__social">
+                <a
+                  href="https://t.me/CZ_AI_binance"
+                  target="_blank"
+                  class="about__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="18"
+                    viewbox="0 0 22 18"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.3925 0.408732C19.6523 0.303203 19.9365 0.266807 20.2154 0.303332C20.4942 0.339856 20.7577 0.447966 20.9783 0.616409C21.1989 0.784852 21.3685 1.00747 21.4695 1.26109C21.5706 1.51471 21.5994 1.79007 21.5529 2.0585L19.1289 16.0165C18.8937 17.3629 17.3624 18.1351 16.0864 17.4644C15.0191 16.9033 13.4339 16.0389 12.0085 15.1369C11.2957 14.6854 9.11268 13.2395 9.38463 12.2107C9.61832 11.3311 13.3038 8.02544 15.41 6.06013C16.2367 5.28801 15.8621 4.8426 14.8865 5.55283C12.4638 7.31623 8.57433 9.99785 7.28877 10.7527C6.15471 11.4183 5.56419 11.5319 4.85884 11.4183C3.572 11.2113 2.37897 10.8907 1.40563 10.5001C0.0903552 9.97249 0.159713 8.22329 1.41302 7.71395L19.3925 0.408732Z"
+                      fill="#FAFDFF"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://x.com/CZ_AI_binance"
+                  target="_blank"
+                  class="about__social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M18.901 1.15332H22.581L14.541 10.3433L24 22.8463H16.594L10.794 15.2623L4.156 22.8463H0.474L9.074 13.0163L0 1.15432L7.594 1.15432L12.837 8.08632L18.901 1.15332ZM17.61 20.6443H19.649L6.486 3.24032H4.298L17.61 20.6443Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+                <!--
+<a href="#" target="_blank " class="about__social-item">
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="28"
+height="28"
+viewBox="0 0 28 28"
+fill="none">
+<path
+fill-rule="evenodd"
+clip-rule="evenodd"
+d="M11.2278 3.20298C9.81798 3.9585 8.66462 4.5979 8.66492 4.62394C8.66557 4.69102 12.0483 6.45372 12.1684 6.4494C12.2229 6.44757 12.6192 6.25985 13.0488 6.03251L13.83 5.61911L14.6832 6.07034L15.5364 6.52165L16.9336 5.87573C19.0388 4.9024 19.2574 4.79573 19.2232 4.75995C19.1777 4.71237 18.4227 4.29507 16.374 3.18533C15.3839 2.64899 14.4229 2.12318 14.2384 2.01671C14.0538 1.91014 13.8777 1.82454 13.8469 1.8262C13.8161 1.82785 12.6375 2.44746 11.2278 3.20298ZM5.04456 6.49718L3.57706 7.27716V10.7001C3.57706 12.5827 3.5963 14.123 3.61999 14.123C3.64368 14.123 4.36559 13.801 5.22443 13.4073L6.786 12.6917V9.08377L7.54915 9.5115C8.13715 9.84081 8.72562 10.1694 9.31428 10.4974L10.3163 11.0556L10.7622 10.8481C11.0418 10.7178 11.3209 10.5862 11.5994 10.4533C11.8146 10.3502 12.3429 10.1053 12.7735 9.90916C13.204 9.71292 13.6024 9.51546 13.6589 9.47054C13.734 9.41076 12.8187 8.89039 10.2737 7.54572C8.35531 6.53212 6.72416 5.70598 6.64892 5.70998C6.57367 5.71398 5.85176 6.06816 5.04456 6.49718ZM19.4875 6.71619C18.488 7.18038 17.6695 7.57877 17.6686 7.60148C17.6678 7.62418 18.2124 7.95744 18.8792 8.34195C19.5459 8.72659 20.0914 9.0618 20.0914 9.08706C20.0914 9.11232 19.5015 9.40638 18.7805 9.7408C18.0593 10.0752 16.2368 10.922 14.7301 11.6228L9.68179 13.9705C8.4119 14.5612 7.26724 15.0935 7.13808 15.1537C4.54422 16.3618 3.83131 16.697 3.73342 16.7545C3.63496 16.8124 3.61269 17.149 3.59516 18.8382L3.57422 20.8531L4.88659 21.541L6.19889 22.229L8.01859 21.384C9.0195 20.9194 9.83835 20.5149 9.83835 20.485C9.83835 20.4552 9.65338 20.3314 9.42747 20.2094C9.20144 20.0874 8.73474 19.8176 8.39034 19.6094C8.046 19.4012 7.70267 19.2103 7.62725 19.185C7.55189 19.1597 7.49136 19.1156 7.49255 19.0867C7.4938 19.0579 8.29514 18.6664 9.27317 18.2164C11.1728 17.3426 12.6266 16.669 15.7476 15.2169C17.1431 14.5677 18.539 13.9191 19.9349 13.2706C21.1617 12.7008 22.5881 12.0355 23.1047 11.7919L24.0439 11.3492L24.0647 9.31142L24.0857 7.27375L22.7546 6.57089C22.0225 6.18431 21.3968 5.86901 21.364 5.87017C21.3312 5.87125 20.4869 6.25194 19.4875 6.71619ZM23.6874 14.0675C23.4912 14.1661 23.1039 14.3507 22.8265 14.4776C22.5491 14.6046 22.0228 14.8489 21.6568 15.0207L20.9916 15.3329L20.9764 17.1218C20.9681 18.1057 20.9328 18.9063 20.8981 18.9012C20.8194 18.8891 19.5725 18.2311 18.3192 17.5401C17.4146 17.0414 17.3577 17.0216 17.1452 17.13C17.0223 17.1927 16.2877 17.5316 15.5129 17.8833C14.738 18.235 14.0788 18.5457 14.0477 18.5738C14.0168 18.6018 15.5763 19.4714 17.5133 20.5064L21.0351 22.388L22.5395 21.5872C23.3669 21.147 24.0705 20.7453 24.1029 20.6948C24.1758 20.5812 24.1695 13.8726 24.0965 13.8817C24.0676 13.8853 23.8835 13.969 23.6874 14.0675ZM15.3563 21.9417C15.0953 22.0571 14.8344 22.1727 14.5736 22.2884C13.7861 22.6391 13.9404 22.6507 13.0033 22.1708C12.3792 21.8512 12.1102 21.7525 11.9935 21.8004C11.9059 21.8362 11.152 22.1852 10.3182 22.5758C9.48442 22.9664 8.77328 23.2859 8.73796 23.2859C8.38807 23.2859 8.96976 23.6434 11.2139 24.8081L13.8459 26.174L14.9533 25.6116C15.5623 25.3022 16.7908 24.6826 17.6833 24.2349C18.5757 23.7869 19.2949 23.4088 19.2814 23.3946C19.2679 23.3804 18.5201 22.9853 17.6196 22.5167L15.9824 21.6648L15.3563 21.9417Z"
+fill="white" />
+</svg>
+</a>
+<a href="#" target="_blank " class="about__social-item">
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="22"
+height="24"
+viewBox="0 0 22 24"
+fill="none">
+<path
+fill-rule="evenodd"
+clip-rule="evenodd"
+d="M13.069 8.5702C13.8052 8.20478 14.7416 7.66669 15.6794 6.92943C15.8771 7.33835 15.8989 7.69511 15.7969 7.98312C15.7247 8.18611 15.5886 8.36272 15.4099 8.5032C15.2163 8.65492 14.9743 8.76566 14.7069 8.82537C14.1995 8.93916 13.6071 8.87287 13.069 8.5702ZM13.1967 12.3151L14.171 12.8755C12.1815 13.986 11.6405 16.0479 10.9979 18.0561C10.3556 16.0479 9.81454 13.9858 7.82509 12.8755L8.79944 12.3151C8.99281 12.2422 9.11719 12.0539 9.10738 11.8482C9.01799 9.96736 9.52802 9.13552 10.2161 8.61346C10.4627 8.42644 10.7321 8.33257 10.9979 8.33257C11.2637 8.33257 11.5331 8.42644 11.7798 8.61346C12.4676 9.13575 12.9776 9.96736 12.8885 11.8482C12.8787 12.0539 13.0035 12.2422 13.1967 12.3151ZM10.9982 0.0341187C12.1245 0.064294 13.2537 0.281956 14.2336 0.705522C14.9123 0.999288 15.5453 1.38713 16.1188 1.85107C16.3777 2.06053 16.591 2.26288 16.8259 2.49585C17.4593 2.51759 18.3851 1.8169 18.8149 1.16126C18.0751 3.57595 14.6999 6.4273 12.3633 7.51849C12.3624 7.51808 12.3618 7.5176 12.3611 7.51718C11.9418 7.1983 11.4701 7.0388 10.9983 7.0388C10.5267 7.0388 10.055 7.1983 9.63565 7.51718C9.635 7.5176 9.63434 7.51825 9.63344 7.51849C7.29633 6.4273 3.92139 3.57573 3.18164 1.16126C3.61145 1.8169 4.53702 2.51781 5.17047 2.49585C5.40532 2.2631 5.61855 2.06053 5.87746 1.85107C6.45076 1.38713 7.08401 0.999288 7.76269 0.705522C8.74285 0.281956 9.87185 0.064294 10.9982 0.0341187ZM8.92735 8.5702C8.19135 8.20478 7.25469 7.66669 6.31685 6.92943C6.11921 7.33835 6.09738 7.69511 6.1992 7.98312C6.27139 8.18611 6.40753 8.36272 6.58623 8.5032C6.78007 8.65492 7.02202 8.76566 7.28945 8.82537C7.79679 8.93916 8.38944 8.87287 8.92735 8.5702Z"
+fill="white" />
+<path
+fill-rule="evenodd"
+clip-rule="evenodd"
+d="M16.7078 6.0262C17.2241 5.50744 17.6791 4.93322 18.0447 4.42068L18.2306 4.76881C18.8286 5.96029 19.1394 7.14713 19.1394 8.4826L19.1381 10.602L19.1492 11.7005C19.1925 14.3976 19.7787 17.1263 21.1062 19.6235L18.3286 17.3932L16.3634 20.5689L14.2988 18.6335L10.9994 23.9652L7.69994 18.6337L5.63538 20.5692L3.67017 17.3935L0.892578 19.6238C2.2201 17.1265 2.8061 14.3976 2.84955 11.7007L2.86069 10.6022L2.85935 8.48284C2.85935 7.14713 3.16995 5.96052 3.7682 4.76903L3.95381 4.42091C4.31967 4.93322 4.77443 5.50744 5.29069 6.02644L5.12937 6.35992C4.81609 7.00755 4.71249 7.73177 4.95647 8.42068C5.11377 8.86424 5.40076 9.24475 5.77085 9.53521C6.13025 9.81718 6.5556 10.0074 7.0008 10.1072C7.2909 10.1722 7.58633 10.1991 7.88003 10.19C7.81158 10.5767 7.78149 10.9776 7.77975 11.3863L5.15967 12.8933L7.18148 14.0217C7.34301 14.1121 7.49701 14.2152 7.64137 14.3309C9.30823 15.8212 10.3105 20.2301 10.9991 22.3837C11.6879 20.2301 12.6901 15.8212 14.357 14.3309C14.5013 14.2155 14.6553 14.1121 14.8169 14.0217L16.8387 12.8933L14.2186 11.3863C14.2166 10.9776 14.1867 10.5767 14.1183 10.19C14.412 10.1991 14.7074 10.1722 14.9975 10.1072C15.4427 10.0074 15.8681 9.81718 16.2275 9.53521C16.5976 9.24475 16.8846 8.86424 17.0418 8.42068C17.2858 7.73201 17.1822 7.00779 16.8689 6.35992L16.7078 6.0262Z"
+fill="white" />
+</svg>
+</a>
+-->
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page__how-tokenomics-box">
+          <div class="page__how-tokenomics-box-bg">
+            <img alt="BG" src="./assets/img/how/How-to-buy-BG.png" />
+            <img alt="BG" src="./assets/img/how/How-to-buy-BG-mob.png" />
+          </div>
+          <section class="page__how how">
+            <div class="how__box">
+              <h2 class="how__title">
+                <img
+                  alt="HOW TO BUY BINA"
+                  src="./assets/img/how/how-to-buy-title.webp"
+                />
+              </h2>
+              <div class="how__images">
+                <img alt="BINA" src="./assets/img/how/01-fox.png" />
+                <img alt="flowers" src="./assets/img/how/01-flowers.png" />
+                <img alt="ball" src="./assets/img/how/01-ball.png" />
+              </div>
+              <div class="how__items">
+                <div class="how__item">
+                  <div class="how__item-header">
+                    <h3>
+                      get
+                      <span>a wallet</span>
+                    </h3>
+                    <img
+                      class="icon-1"
+                      alt="get a wallet"
+                      src="./assets/img/how/icon1.webp"
+                    />
+                  </div>
+                  <div class="how__item-body">
+                    <p>
+                      Download MetaMask or another BNB-compatible wallet. Make
+                      sure it’s connected to the BSC network.
+                    </p>
+                  </div>
+                </div>
+                <div class="how__item">
+                  <div class="how__item-header">
+                    <h3>
+                      Get
+                      <span>some BNB</span>
+                    </h3>
+                    <img
+                      class="icon-2"
+                      alt="get a wallet"
+                      src="./assets/img/how/icon2.png"
+                    />
+                  </div>
+                  <div class="how__item-body">
+                    <p>
+                      Buy BNB on a centralized exchange (like Coinbase, Bybit or
+                      Binance) and transfer it to your wallet.
+                    </p>
+                  </div>
+                </div>
+                <div class="how__item">
+                  <div class="how__item-header">
+                    <h3>
+                      <span>Go to</span>
+                      Pancakeswap
+                    </h3>
+                    <img
+                      class="icon-3"
+                      alt="get a wallet"
+                      src="./assets/img/how/icon3.png"
+                    />
+                  </div>
+                  <div class="how__item-body">
+                    <p>
+                      Head over to Pancakeswap and connect your wallet. Paste
+                      the official $CZAI contract address.
+                    </p>
+                  </div>
+                </div>
+                <div class="how__item">
+                  <div class="how__item-header">
+                    <h3>
+                      $CZAI
+                      <span>$CZAI</span>
+                      $CZAI
+                    </h3>
+                    <img
+                      class="icon-4"
+                      alt="get a wallet"
+                      src="./assets/img/how/icon4.png"
+                    />
+                  </div>
+                  <div class="how__item-body">
+                    <p>Enter the amount of BNB and confirm the transaction.</p>
+                    <p>
+                      <span>Now you're holding $CZAI.</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="page__tokenomics tokenomics">
+            <div class="tokenomics__box">
+              <div class="tokenomics__image">
+                <img
+                  src="./assets/img/tokenomics/vector-light.svg"
+                  alt="light"
+                />
+                <img
+                  alt="fox-coin"
+                  src="./assets/img/tokenomics/fox-coin.png"
+                />
+                <img
+                  data-fls-mouse=""
+                  data-fls-mouse-cx="700"
+                  data-fls-mouse-cy="700"
+                  alt="coins"
+                  src="./assets/img/tokenomics/coins.png"
+                />
+              </div>
+              <div class="tokenomics__body">
+                <div class="tokenomics__items">
+                  <div class="tokenomics__item tokenomics__item--1">
+                    <div class="tokenomics__item-header">LP</div>
+                    <div class="tokenomics__item-value">
+                      <h3>LOCKED</h3>
+                      <img
+                        alt="BURNT"
+                        src="./assets/img/tokenomics/item1.png"
+                      />
+                    </div>
+                  </div>
+                  <div class="tokenomics__item tokenomics__item--2">
+                    <div class="tokenomics__item-header">total supply</div>
+                    <div class="tokenomics__item-value">
+                      <h3>1.000.000.000</h3>
+                    </div>
+                  </div>
+                  <div class="tokenomics__item tokenomics__item--3">
+                    <div class="tokenomics__item-header">TAX</div>
+                    <div class="tokenomics__item-value">
+                      <img
+                        alt="BURNT"
+                        src="./assets/img/tokenomics/item3.webp"
+                      />
+                      <h3>0/0</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="tokenomics__ca">
+                  <div class="tokenomics__ca-value" id="tokenValue">
+                    0x00000000000000000000000000000000000000
+                  </div>
+                  <button
+                    type="button"
+                    class="tokenomics__ca-button copy-ca-btn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="19"
+                      viewbox="0 0 17 19"
+                      fill="none"
+                    >
+                      <path
+                        d="M1.98893 18.9083C1.5306 18.9083 1.13838 18.7452 0.812266 18.4191C0.486155 18.093 0.322821 17.7005 0.322266 17.2416V5.57495H1.98893V17.2416H11.1556V18.9083H1.98893ZM5.32227 15.575C4.86393 15.575 4.47171 15.4119 4.1456 15.0858C3.81949 14.7597 3.65615 14.3672 3.6556 13.9083V2.24162C3.6556 1.78328 3.81893 1.39106 4.1456 1.06495C4.47227 0.73884 4.86449 0.575507 5.32227 0.574951H11.1556L16.1556 5.57495V13.9083C16.1556 14.3666 15.9925 14.7591 15.6664 15.0858C15.3403 15.4125 14.9478 15.5755 14.4889 15.575H5.32227ZM10.3223 6.40828H14.4889L10.3223 2.24162V6.40828Z"
+                        fill="black"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="page__join join">
+          <div class="join__bg">
+            <img alt="BG" src="./assets/img/join/bg.webp" />
+          </div>
+          <h2 class="join__title">
+            <img alt="JOIN NOW" src="./assets/img/join/title.png" />
+          </h2>
+          <div class="join__body">
+            <div class="join__body-images">
+              <div class="join__body-images-main">
+                <img alt="BINA" src="./assets/img/join/main.png" />
+                <img alt="BINA" src="./assets/img/join/main-mob.png" />
+              </div>
+              <div class="join__body-images-rocks">
+                <img alt="BINA" src="./assets/img/join/mounains.webp" />
+                <img alt="BINA" src="./assets/img/join/mounains-mob.webp" />
+              </div>
+              <div class="join__body-images-light">
+                <img alt="Light" src="./assets/img/join/Ligh.webp" />
+                <img alt="Light" src="./assets/img/join/Ligh-mob.webp" />
+              </div>
+              <div class="join__body-images-memes">
+                <img alt="meme-coins" src="./assets/img/join/meme-coins.webp" />
+                <img
+                  alt="meme-coins"
+                  src="./assets/img/join/meme-coins-mob.webp"
+                />
+              </div>
+            </div>
+            <!--
+<div class="join__body-images-mob">
+<img src="@img/join/meme-coins-mob.png" alt="BINA" />
+</div>
+-->
+            <div class="join__body-actions">
+              <a
+                href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x00000000000000000000000000000000000000"
+                target="_blank"
+                class="join__body-button"
+                >buy now</a
+              >
+              <div class="join__body-social">
+                <a
+                  href="https://t.me/CZ_AI_binance"
+                  target="_blank"
+                  class="join__body-social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="31"
+                    height="25"
+                    viewbox="0 0 31 25"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26.9901 0.661564C27.3561 0.51613 27.7563 0.465971 28.1492 0.516306C28.542 0.566642 28.9131 0.715634 29.2239 0.947772C29.5346 1.17991 29.7736 1.48671 29.9159 1.83624C30.0583 2.18577 30.0988 2.56525 30.0333 2.93518L26.6202 22.1714C26.2892 24.0269 24.1322 25.091 22.3348 24.1667C20.8313 23.3935 18.5984 22.2021 16.5904 20.9591C15.5864 20.3368 12.5113 18.3443 12.8942 16.9264C13.2233 15.7141 18.4144 11.1585 21.381 8.45001C22.5454 7.38592 22.0177 6.77207 20.6435 7.75087C17.231 10.1811 11.7527 13.8768 9.94191 14.9171C8.34455 15.8344 7.51276 15.991 6.5192 15.8344C4.70655 15.5491 3.02603 15.1072 1.65496 14.5689C-0.197768 13.8418 -0.100232 11.4312 1.66511 10.7292L26.9901 0.661564Z"
+                      fill="#FAFDFF"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://x.com/CZ_AI_binance"
+                  target="_blank"
+                  class="join__body-social-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="31"
+                    height="29"
+                    viewbox="0 0 31 29"
+                    fill="none"
+                  >
+                    <path
+                      d="M23.7649 1.39478L28.3649 1.39478L18.3149 12.4994L30.1387 27.6072H20.8812L13.6312 18.4432L5.33367 27.6072H0.731172L11.4812 15.7292L0.138672 1.39598L9.63117 1.39598L16.1849 9.77215L23.7649 1.39478ZM22.1512 24.9464H24.6999L8.24617 3.91657L5.51117 3.91657L22.1512 24.9464Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer data-fls-footer="" class="footer">
+        <div class="footer__container">
+          <span>2026 © ALL RIGHTS RESERVED</span>
+          <a target="_blank">
+            <span>contact@binabnb.xyz</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
